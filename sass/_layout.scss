@@ -8,7 +8,9 @@
 }
 
 .header {
-
+    height: 7rem;
+    background-color: #fff;
+    border-bottom: var(--line);
 }
 
 .content  {
@@ -16,9 +18,9 @@
 }
 
 .sidebar {
-
+    background-color: var(--color-grey-dark-1);
 }
 
 .hotel-view {
-
+    background-color: #fff;
 }
