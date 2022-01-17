@@ -209,10 +209,21 @@
 ////////////////////////////////////////
 // HOTEL OVERVIEW
 .overview {
+    display: flex;
+    border-bottom: var(--line);
+    align-items: center;
+
     &__heading {
+        font-size: 2.25rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 1.5rem 3rem;
     }
 
     &__stars {
+        margin-right: auto; //great trick to use with flex
+        display: flex;
     }
 
     &__icon-star,
