@@ -120,7 +120,6 @@
     }
 }
 
-
 ////////////////////////////////////////
 // SIDE NAVIGATION
 .side-nav {
@@ -196,7 +195,6 @@
     padding: 2.5rem;
 }
 
-
 ////////////////////////////////////////
 // GALLERY
 .gallery {
@@ -207,7 +205,6 @@
         display: block;
     }
 }
- 
 
 ////////////////////////////////////////
 // HOTEL OVERVIEW
@@ -215,7 +212,7 @@
     display: flex;
     border-bottom: var(--line);
     align-items: center;
-
+    
     &__heading {
         font-size: 2.25rem;
         font-weight: 300;
@@ -244,9 +241,6 @@
 
     &__icon-location {
         margin-right: .5rem;
-    }
-
-    &__icon-location {
     }
 
     &__rating {
@@ -282,13 +276,12 @@
     color: var(--color-primary);
     font-size: inherit;
     border-bottom: 1px solid currentColor;
-    
     padding-bottom: 2px;
     display: inline-block;
     background-color: transparent;
     cursor: pointer;
     transition: all 0.2s;
-    
+
     &:hover {
         color: var(--color-grey-dark-1);
     }
@@ -320,8 +313,9 @@
 ////////////////////////////////////////
 // PARAGRAPH
 .paragraph:not(:last-of-type) {
-    margin-bottom: 2rem; 
+    margin-bottom: 2rem;
 }
+
 
 
 ////////////////////////////////////////
@@ -338,12 +332,60 @@
 
     &__item {
         flex: 0 0 50%;
+        margin-bottom: 0.7rem;
+    }
+
+    &__item::before {
+        content: "";
+        display: inline-block;
+        height: 1rem;
+        width: 1rem;
+        margin-right: .7rem;
+
+        // Older browsers
+        background-image: url(../img/chevron-thin-right.svg);
+        background-size: cover;
+
+        //Newer browsers - masks
+        @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+            background-color: var(--color-primary);
+            -webkit-mask-image: url(../img/chevron-thin-right.svg);
+            -webkit-mask-size: cover;
+            mask-image: url(../img/chevron-thin-right.svg);
+            mask-size: cover;
+            background-image: none;
+        }
+        
     }
 }
+
 
 
 ////////////////////////////////////////
 // RECOMMEND
 .recommend {
+    font-size: 1.3rem;
+    color: var(--color-grey-dark-3);
+    display: flex;
+    align-items: center;
 
+    &__count {
+        margin-right: auto;
+    }
+
+    &__friends {
+        display: flex;
+    }
+
+    &__photo {
+        box-sizing: content-box; // border makes the phot smaller. So fix it changing box-sizing
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        
+        &:not(:last-child) {
+            margin-right: -2rem;
+        }
+    }
 }
