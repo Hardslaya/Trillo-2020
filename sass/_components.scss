@@ -120,7 +120,6 @@
     }
 }
 
-
 ////////////////////////////////////////
 // SIDE NAVIGATION
 .side-nav {
@@ -230,7 +229,6 @@
     }
 }
 
-
 ////////////////////////////////////////
 // GALLERY
 .gallery {
@@ -241,7 +239,6 @@
         display: block;
     }
 }
-
 
 ////////////////////////////////////////
 // HOTEL OVERVIEW
@@ -363,6 +360,7 @@
 }
 
 
+
 ////////////////////////////////////////
 // LIST
 .list {
@@ -405,6 +403,7 @@
 }
 
 
+
 ////////////////////////////////////////
 // RECOMMEND
 .recommend {
@@ -414,7 +413,7 @@
     align-items: center;
 
     &__count {
-        margin-right: auto;
+      margin-right: auto;  
     }
 
     &__friends {
@@ -427,24 +426,27 @@
         width: 4rem;
         border-radius: 50%;
         border: 3px solid #fff;
-        
+
         &:not(:last-child) {
             margin-right: -2rem;
         }
     }
 }
 
-
 ////////////////////////////////////////
 // REVIEWS
 .review {
-    
     background-color: #fff;
     box-shadow: var(--shadow-light);
     padding: 3rem;
     margin-bottom: 3.5rem;
     position: relative;
     overflow: hidden;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
 
     &__text {
         margin-bottom: 2rem;
@@ -485,6 +487,7 @@
         font-size: 2.2rem;
         font-weight: 300;
     }
+
     &::before {
         content: "\201C";
         position: absolute;
@@ -504,13 +507,17 @@
     padding: 3.5rem 0;
     text-align: center;
 
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2.5rem 0;
+    }
+
     &__book-now {
         font-size: 2rem;
         font-weight: 300;
         text-transform: uppercase;
         margin-bottom: 2.5rem;
     }
-} 
+}
 
 ////////////////////////////////////////
 // CALL TO ACTION
@@ -546,6 +553,7 @@
     &:hover {
         background-image: linear-gradient(to left, var(--color-primary-light), var(--color-primary-dark));
     }
+
 
     &:hover &__visible {
         transform: translateY(100%);
