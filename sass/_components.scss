@@ -206,6 +206,13 @@
         height: 1.75rem;
         margin-right: 2rem;
         fill: currentColor; //the same as var(--color-grey-light-1)
+
+        @media only screen and (max-width: $bp-small) {
+            margin-right: 0;
+            margin-bottom: .7rem;
+            width: 1.5rem;
+            height: 1.5rem;
+        }
     }
 }
 
