@@ -138,6 +138,14 @@
 
         &:not(:last-child) {
             margin-bottom: .5rem;
+
+            @media only screen and (max-width: $bp-medium) {
+                margin: 0;
+            }
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            flex: 1;
         }
     }
 
@@ -179,6 +187,16 @@
         align-items: center;
         position: relative; //z-index only works with positioned elements
         z-index: 10;
+
+        @media only screen and (max-width: $bp-medium) {
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            padding: 1.5rem .5rem;
+        }
     }
 
     
